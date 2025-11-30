@@ -1,17 +1,14 @@
 <script>
-	import { on } from 'svelte/events';
-
 	let NUMBER_EQUALS_CHARACTERS = 6;
 	let EQUAL_CHARACTERS = '='.repeat(20);
 	let MAIN_WIDTH = 0;
 	let MAIN_MIN_WIDTH = 1700;
-
 	function setAmountofEqualCharacters() {
 		EQUAL_CHARACTERS.repeat(+1);
 		return console.log(NUMBER_EQUALS_CHARACTERS);
 	}
-
 	//console.log(visualViewport?.width + "x" + visualViewport?.height);
+	console.log('https://haj-links.vercel.app/signs');
 </script>
 
 <!--
@@ -47,6 +44,7 @@
 			</ul>
 		</div>
 		<div>┗{EQUAL_CHARACTERS}┛</div>
+		<a href="/signs">signs</a>
 	</div>
 </main>
 
