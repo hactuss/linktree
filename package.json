@@ -14,7 +14,9 @@
 		"test": "npm run test:unit -- --run"
 	},
 	"dependencies": {
-		"sass": "^1.94.2",
+		"deno": "^2.6.5",
+		"flowbite-svelte": "^1.31.0",
+		"sass": "^1.97.2",
 		"sass-embedded": "^1.93.3"
 	},
 	"devDependencies": {
