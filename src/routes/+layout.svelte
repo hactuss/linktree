@@ -1,12 +1,16 @@
 <script lang="ts">
-	import favicon from '$lib/assets/doggo.gif';
-	import '../app.scss';
-	let { children } = $props();
+    import favicon from "$lib/assets/doggo.gif";
+    import "../app.scss";
+    let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
-	<title>hactuss linktree</title>
+    <link rel="icon" href={favicon} />
+    <link
+        rel="stylesheet"
+        href="https://raw.githubusercontent.com/sindresorhus/modern-normalize/refs/heads/main/modern-normalize.css"
+    />
+    <title>hactuss linktree</title>
 </svelte:head>
 
 {@render children?.()}
