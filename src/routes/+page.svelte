@@ -46,8 +46,8 @@
             >
 
             <a href="https://center-calc.vercel.app">center calculator</a>
+            <a href="https://ability-farming.vercel.app/">ability farming guide </a>
 
-            <!--<li><a href="https://uk-terminal.vercel.app">ultrakill terminal</a></li> -->
         </div>
         <div>┗{EQUAL_CHARACTERS}┛</div>
         <a href="/signs">signs</a>
