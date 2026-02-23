@@ -1,6 +1,25 @@
 <script>
+    import { onMount } from "svelte";
+
     let NUMBER_EQUALS_CHARACTERS = 6;
-    let EQUAL_CHARACTERS = "=".repeat(20);
+    let EQUAL_CHARACTERS = "=".repeat(250);
+    let EQUAL_CHARACTERS_side = "=".repeat(250);
+
+    let cursor = $state(" ");
+    onMount(() => {
+        const interval = setInterval(() => {
+            if (cursor == " ") {
+                cursor = "_";
+            } else {
+                cursor = " ";
+            }
+        }, 500);
+
+        return () => {
+            clearInterval(interval);
+        };
+    });
+
     let MAIN_WIDTH = 0;
     let MAIN_MIN_WIDTH = 1700;
     let PORTFOLIO_TEXT = ">> my portfolio <<";
@@ -15,43 +34,97 @@
 <!--
 <p>Actual width: {MAIN_WIDTH}</p>
 <p>Min width: {MAIN_MIN_WIDTH}</p> -->
-<main id="main-container" bind:clientWidth={MAIN_WIDTH}>
-    <div id="inner-content">
-        <div>┏{EQUAL_CHARACTERS}┓</div>
-        <div>
-            <br />
-            <h1>Hactuss</h1>
-            <br />
-            <img
-                src="https://media1.tenor.com/m/mc3OyxhLazUAAAAC/doggo-doge.gif"
-                alt=""
-                width="150px"
-            />
-            <br />
-            <a href="https://hactuss.vercel.app">Homepage</a>
-            <a href="https://youtube.com/@hactuss">YouTube</a>
-            <a href="https://hactuss.newgrounds.com">Newgrounds</a>
+
+<div class="newblock">
+    <p>{EQUAL_CHARACTERS}</p>
+    <div class="flex-r">
+        <div class="border-left">{EQUAL_CHARACTERS_side}</div>
+        <div class="nb-inner">
+            <h1>Hactuss{cursor}</h1>
+            <div class="doggo-container">
+                <img
+                    src="https://media.tenor.com/9TsiJq--SsEAAAAj/doge-dance.gif"
+                    alt="doggo"
+                    class="doggo"
+                />
+            </div>
             <a href="https://github.com/hactuss">Github</a>
+            <a href="https://hactuss.vercel.app">Homepage</a>
+            <a href="https://hactuss.newgrounds.com">Newgrounds</a>
+            <a href="https://youtube.com/@hactuss">YouTube</a>
+
+            <h2>
+                <a href="https://hactuss-portfolio.vercel.app/"
+                    >{PORTFOLIO_TEXT}</a
+                >
+            </h2>
             <br />
-            <a href="https://hactuss-portfolio.vercel.app/">{PORTFOLIO_TEXT}</a>
-            <br />
-            <h2>passion projects</h2>
+            <h2>Finished projects</h2>
             <a href="https://isitspookymonth.vercel.app">is it spooky month?</a>
-            <a href="https://officehaj.vercel.app"
-                >The office</a
-            >
+            <a href="https://officehaj.vercel.app">The office</a>
             <a href="https://center-calc.vercel.app">center calculator</a>
-            <a href="https://ability-farming.vercel.app/">ability farming guide for Splatoon 3 players</a>
+            <a href="https://ability-farming.vercel.app/"
+                >ability farming guide for Splatoon 3 players</a
+            >
         </div>
-        <div>┗{EQUAL_CHARACTERS}┛</div>
+        <div class="border-right">{EQUAL_CHARACTERS_side}</div>
     </div>
-</main>
+    <p class="bottom-row">{EQUAL_CHARACTERS}</p>
+</div>
 
 <!-- ▎▒-->
 <style>
-    #main-container {
-        margin-top: 25px;
+    * {
+        margin: 0%;
+        padding: 0;
+        border: 0;
+    }
+    a {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .flex-r {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .newblock,
+    .border-left {
+        overflow: hidden;
+        /*border: solid red 1px;*/
+        height: 100dvh;
+    }
+    .bottom-row {
+        position: absolute;
+        bottom: 0;
+    }
+    .nb-inner {
+        /*border: solid blueviolet 1px;*/
+        width: 100%;
+    }
+    .border-left,
+    .border-right {
+        writing-mode: sideways-lr;
+    }
+    .doggo {
+        animation-name: spin;
+        animation-duration: 3000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .doggo-container {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
 </style>
