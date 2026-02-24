@@ -36,9 +36,9 @@
 <p>Min width: {MAIN_MIN_WIDTH}</p> -->
 
 <div class="newblock">
-    <p>{EQUAL_CHARACTERS}</p>
+    <p class="border">{EQUAL_CHARACTERS}</p>
     <div class="flex-r">
-        <div class="border-left">{EQUAL_CHARACTERS_side}</div>
+        <div class="border-left border">{EQUAL_CHARACTERS_side}</div>
         <div class="nb-inner">
             <h1>Hactuss{cursor}</h1>
             <div class="doggo-container">
@@ -67,9 +67,9 @@
                 >ability farming guide for Splatoon 3 players</a
             >
         </div>
-        <div class="border-right">{EQUAL_CHARACTERS_side}</div>
+        <div class="border-right border">{EQUAL_CHARACTERS_side}</div>
     </div>
-    <p class="bottom-row">{EQUAL_CHARACTERS}</p>
+    <p class="border-bottom border">{EQUAL_CHARACTERS}</p>
 </div>
 
 <!-- ▎▒-->
@@ -92,11 +92,10 @@
     .newblock,
     .border-left {
         overflow: hidden;
-        /*border: solid red 1px;*/
         height: 100dvh;
     }
-    .bottom-row {
-        position: absolute;
+    .border-bottom {
+        position: fixed;
         bottom: 0;
     }
     .nb-inner {
