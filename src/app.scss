@@ -16,6 +16,10 @@ p {
 a {
     display: block;
 }
+
+img {
+    image-rendering: pixelated;
+}
 #border-left {
     text-align: left;
 }
