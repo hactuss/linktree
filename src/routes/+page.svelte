@@ -59,7 +59,7 @@
                 >
             </h2>
             <br />
-            <h2>Finished projects</h2>
+            <h2>Projects that are <a href="https://www.youtube.com/watch?v=bJQj1uKtnus">done</a></h2>
             <a href="https://isitspookymonth.vercel.app">is it spooky month?</a>
             <a href="https://officehaj.vercel.app">The office</a>
             <a href="https://center-calc.vercel.app">center calculator</a>
