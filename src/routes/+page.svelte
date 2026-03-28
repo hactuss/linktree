@@ -59,7 +59,13 @@
                 >
             </h2>
             <br />
-            <h2>Projects that are <a href="https://www.youtube.com/watch?v=bJQj1uKtnus">done</a></h2>
+            <h2>
+                Projects that are <a
+                    href="https://www.youtube.com/watch?v=bJQj1uKtnus"
+                    class="done"
+                    target="_blank">done</a
+                >
+            </h2>
             <a href="https://isitspookymonth.vercel.app">is it spooky month?</a>
             <a href="https://officehaj.vercel.app">The office</a>
             <a href="https://center-calc.vercel.app">center calculator</a>
@@ -83,6 +89,7 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
         background-color: rgba(255, 255, 255, 0.1);
+        display: block;
     }
     .flex-r {
         display: flex;
@@ -105,6 +112,11 @@
     .border-left,
     .border-right {
         writing-mode: sideways-lr;
+    }
+    .done {
+        display: inline;
+        background-color: rgba(0, 0, 0, 0);
+        text-decoration: none;
     }
     .doggo {
         animation-name: spin;
